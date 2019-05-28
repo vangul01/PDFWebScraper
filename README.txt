@@ -1,8 +1,8 @@
 READ ME
 
-Hey! So this is the web scraper I was working on, located in fresh_script.py but I would use the jupyter notebook to run it. I found some bugs during my last week and didn't get around to fixing them but they're due to some missing regex formatting cases. The year 2019 is good though and I included what the output should look like in this folder. I found formatting issues for 2018 though, and none of the Saturdays in 2010 are valid for some reason... 
+This is a PDF web scraper that scrapes Song Index Billboard information from links in this format: https://www.billboard.com/files/index/songindex_01_19_2019.pdf
 
-Anyway, the billboard song index URLs are sometimes invalid even if it falls on a Saturday, sometimes there isn't a new song index out every week so I have that in the try except block. Everything else should have enough notes, but basically the flow is:
+It is meant to collect alternative data to supplement company song data in order to figure out growth and decay rates of how long certain songs are on the billboard charts and what ranks they hold throughout the weeks. The billboard song index URLs are sometimes invalid even if it falls on a Saturday, sometimes there isn't a new song index out every week. The basic flow of fresh_script is:
 
 1. choose whether you want all saturdays for a certain year (per_year = True) or a block of years (per_year = False)
 	I recommend per_year = True since there are apparently bugs and even choosing 1 (for 2018-2019) is too much data for the server apparently...not sure but didnt want to risk it
@@ -17,6 +17,4 @@ Anyway, the billboard song index URLs are sometimes invalid even if it falls on 
 
 Thats it! In the end you'll have clean, well formatted 3rd party data in a csv that you can then merge with the songs from the downtown catalog.
 
-For the downtown songs I included the script I used to cleanup/modify the results from DataGrip and included the largest csv I was able to get from the data cause it takes like 1 hour to run the query on datagrip and then another hour to output a csv. Hopefully this helps!
-
-Good luck and enjoy your internship! :)
+For the downtown songs I included the script I used to cleanup/modify the results from the DataGrip IDE and included the largest csv I was able to get from the data pulled.
